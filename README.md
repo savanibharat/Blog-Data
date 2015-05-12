@@ -1,1 +1,0 @@
-Visit blog at http://www.data-structure-learning.blogspot.com/
