@@ -37,6 +37,11 @@ http://data-structure-learning.blogspot.com/2015/05/java-collections-part-9-list
 Difference Hashtable & HashMap	
 http://data-structure-learning.blogspot.com/2015/05/difference-between-hashtableand-hashmap.html
 
+### Tree Data Structure
+Binary Search Tree Part 1 
+(Introduction & Insertion of Node in tree)
+http://data-structure-learning.blogspot.com/2015/05/part-1-binary-search-tree-introduction.html
+
 ### Linked List Data Structure
 Linked List Definition and Types	
 http://data-structure-learning.blogspot.com/2015/05/let-us-start-understanding-linked-list.html
