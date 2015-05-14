@@ -29,7 +29,11 @@ http://data-structure-learning.blogspot.com/2015/05/bulk-operation-in-arraylist.
 Java Collections Part 8
 (Iterator Interface)	
 http://data-structure-learning.blogspot.com/2015/05/java-collections-part-8-iterator.html
- 
+
+Java Collections Part 9
+(ListIterator Interface)
+http://data-structure-learning.blogspot.com/2015/05/java-collections-part-9-listiterator.html
+
 Difference Hashtable & HashMap	
 http://data-structure-learning.blogspot.com/2015/05/difference-between-hashtableand-hashmap.html
 
