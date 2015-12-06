@@ -1,0 +1,283 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:.5in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>Difference between ArrayList&lt;E&gt; and
+LinkedList&lt;E&gt;</p>
+
+<p class=MsoNormal>Previously we <a
+href="http://data-structure-learning.blogspot.com/2015/05/difference-between-arraylist-and-arrays.html">differentiated
+in ArrayList&lt;E&gt; and array</a>. We had also discussed ways to <a
+href="http://data-structure-learning.blogspot.com/2015/05/java-collections-part-6iterating-over.html">traverse
+over ArrayList&lt;E&gt;</a> and <a
+href="http://data-structure-learning.blogspot.com/2015/05/different-ways-to-traverse-map.html">HashMap&lt;K,
+V&gt;</a>. </p>
+
+<p class=MsoNormal>This is a basic interview question. We are expected to
+compare 2 different implementations of List&lt;E&gt; interface of Java
+Collections Framework.</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>First
+let us understand what are differences in terms of <b>implementation? </b></p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ArrayList&lt;E&gt;
+as we know is backed by an array with some initial capacity. If that array is
+filled then contents are moved to new array who’s size is roughly twice of
+previous array.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>LinkedList&lt;E&gt;
+is an implementation of <a
+href="http://data-structure-learning.blogspot.com/2015/05/let-us-start-understanding-linked-list.html">Linked
+List data structure</a>. private static class Node defines the structure of
+node using the constructor taking 3 parameters as previous pointer, element and
+next pointer.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;text-indent:-.25in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Now
+comes <b>performance</b>. The performance of both of the class depends on the
+type of operations that we perform.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>a.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>add(E
+e) </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ArrayList&lt;E&gt; adds element at the end of the list. This can be done
+in O(1) time. But let say that size of backing array is to be incremented then
+old elements is to be copied to new array and then new element is appended.
+This takes O(n) time.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In LinkedList&lt;E&gt; this operation takes O(1) time. The reason is
+LinkedList&lt;E&gt; maintains the tail pointer and hence element is just appended
+by setting the links.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>b.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>remove(int
+index) and remove(Object o)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ArrayList&lt;E&gt; removes element once it is able to find it. If
+element is found then all other elements in backing array are shifted one
+place. This requires O(n) time.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LinkedList&lt;E&gt; has several implementations of remove such as</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>removeFirst()
+– removes first element. O(1) time.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>removeLast()–
+removes last element. O(1) time.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>remove(int
+index) – removes element at index. O(n) time.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>remove(Object
+o) – removes element by searching it. O(n) time.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>remove()
+– removes first element. O(1) time. This method calls removeFirst.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>removeFirstOccurrence(Object
+o) – removes first occurrence of Object.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>removeLastOccurrence(Object
+o) – removes last occurrence of Object.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>c.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>get(int
+index)</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ArrayList&lt;E&gt; gets the element at index in O(1).</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LinkedList has 3 different method that returns the element.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>get(int
+index) –returns the element at index O(n) time because link list does not
+provide the indexed retrieval.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>getFirst()
+– returns the first element from the list.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in;text-indent:-.25in'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>getLast()
+– returns the last element from the list.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.75in'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>d.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Iteration</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ArrayList&lt;E&gt; provides 2 iterators. <a
+href="http://data-structure-learning.blogspot.com/2015/05/java-collections-part-8-iterator.html">Iterator&lt;E&gt;</a>
+and <a
+href="http://data-structure-learning.blogspot.com/2015/05/java-collections-part-9-listiterator.html">ListIterator&lt;E&gt;</a>.
+Study about their <a
+href="http://data-structure-learning.blogspot.com/2015/05/5-difference-between-iterator-and.html">differences
+here</a>. Traverse or <a
+href="http://data-structure-learning.blogspot.com/2015/05/java-collections-part-6iterating-over.html">iterate
+ArrayList in 6 different ways</a>.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LinkedList&lt;E&gt; provides 3 iterators. Iterator&lt;E&gt;,
+ListIterator&lt;E&gt; and decendingIterator. decendingIterator means it has 3
+method of Iterator that works in decening manner i.e. from back to front.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>e.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Capacity</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ArrayList&lt;E&gt; has initial capacity of 10 elements.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>LinkedList&lt;E&gt; does not define any capacity. It just creates new
+nodes and appends them.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.75in;text-indent:-.25in'>f.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Memory Overhead</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>i.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In ArrayList&lt;E&gt; backing array is used to store element at index so
+memory overhead is 0(zero).</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:1.25in;text-indent:-1.25in'><span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ii.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>In LinkedList&lt;E&gt; previous and next links are to be maintained
+which can be troublesome. So it has memory head.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>We will also see Similarities between ArrayList&lt;E&gt; and
+LinkedList&lt;E&gt; and When to use ArrayList&lt;E&gt; or LinkedList&lt;E&gt;</p>
+
+</div>
+
+</body>
+
+</html>
